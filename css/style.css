@@ -1,0 +1,66 @@
+.container {
+    width: 100%;
+    margin-top: 1%;
+}
+
+.chessBoard {
+    border: 2px solid lightgray;
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px #ccc;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.50%;
+    height: 65px;
+    cursor: pointer;
+    position: relative;
+}
+
+.square .popup {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    background-color: lightgreen;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+}
+
+.square .popup::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: lightgreen transparent transparent transparent;
+}
+
+.square .show {
+    visibility: visible;
+    animation: fadeIn 1s;
+}
+
+#submit_btn {
+    padding: 5px;
+    border-radius: 4px;
+    background: lightgreen;
+    outline: none;
+    margin-left: 46%;
+    cursor: pointer;
+}
